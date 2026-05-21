@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AIbeta | 连接全球 AI",
-  description: "帮助中文用户理解、发现并使用全球 AI 工具。",
+  title: "AIbeta | One Place for the AI Models You Use",
+  description:
+    "AIbeta helps global users discover, compare, and use the AI models they want from one focused platform.",
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="zh-CN"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-[#05060a] text-white">{children}</body>

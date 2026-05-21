@@ -10,8 +10,8 @@ export default function ExplorePage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Explore"
-            title="探索全球 AI 工具"
-            description="按用途、难度与价格快速浏览，找到最适合你的第一个工具组合。"
+            title="Explore AI models and tools"
+            description="Browse the models and AI products that can become part of the AIbeta workspace vision."
           />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {exploreTools.map((tool) => (

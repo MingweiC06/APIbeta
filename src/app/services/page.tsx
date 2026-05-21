@@ -4,16 +4,19 @@ import { SectionHeader } from "../components/section-header";
 
 const services = [
   {
-    title: "AI Setup",
-    description: "协助完成账号、基础配置、工具入口和中文使用环境设置。",
+    title: "For Students",
+    description:
+      "Choose AI models for studying, research, writing, coding homework, language learning, and building better learning habits.",
   },
   {
-    title: "Tool Recommendations",
-    description: "根据学习、创作、运营、开发或团队需求匹配合适的全球 AI 工具。",
+    title: "For Creators",
+    description:
+      "Set up model workflows for scripts, content planning, image generation, video ideas, thumbnails, and publishing systems.",
   },
   {
-    title: "Workflow Guidance",
-    description: "把 AI 工具接入日常工作流，形成可复用的提示词和操作步骤。",
+    title: "For Builders and Teams",
+    description:
+      "Compare models, design workflows, and reduce tool switching for founders, developers, and small teams.",
   },
 ] as const;
 
@@ -24,8 +27,8 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Services"
-            title="AI 工具上手服务"
-            description="从选择到配置，再到形成稳定工作流，AIbeta 帮你少走弯路。"
+            title="Different AI help for different people"
+            description="AIbeta can guide users by role, because a student, creator, founder, and developer should not receive the same AI setup."
           />
           <div className="grid gap-4 md:grid-cols-3">
             {services.map((service) => (
@@ -41,7 +44,7 @@ export default function ServicesPage() {
               href="/contact"
               className="inline-flex rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#05060a] transition hover:bg-teal-100"
             >
-              预约咨询
+              Book a consultation
             </Link>
           </div>
         </div>

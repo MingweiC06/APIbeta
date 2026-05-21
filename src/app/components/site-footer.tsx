@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-6 text-sm text-white/54 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-semibold text-white">AIbeta</p>
-          <p className="mt-2">连接全球 AI，降低中文用户的使用门槛。</p>
+          <p className="mt-2">One focused place for discovering, comparing, and using the AI models you choose.</p>
         </div>
 
         <div className="flex flex-wrap gap-4">

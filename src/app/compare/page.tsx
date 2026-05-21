@@ -9,13 +9,13 @@ export default function ComparePage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Compare"
-            title="GPT、Claude、Gemini 对比"
-            description="用中文快速理解三个主流平台的定位，减少选择成本。"
+            title="GPT vs Claude vs Gemini"
+            description="A quick model comparison for users who want to choose with less noise."
           />
           <div className="glass-card overflow-x-auto rounded-lg">
             <div className="min-w-[760px]">
               <div className="grid grid-cols-4 border-b border-white/10 bg-white/[0.04] text-sm font-semibold text-white">
-                <div className="p-4 text-white/50">维度</div>
+                <div className="p-4 text-white/50">Category</div>
                 <div className="p-4">GPT</div>
                 <div className="p-4">Claude</div>
                 <div className="p-4">Gemini</div>

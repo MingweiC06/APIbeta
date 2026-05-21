@@ -14,11 +14,11 @@ export function ToolCard({ name, useCase, difficulty, price, accent }: ToolCardP
       <p className="mt-3 min-h-14 text-sm leading-6 text-white/58">{useCase}</p>
       <div className="mt-6 grid gap-3 text-sm">
         <div className="flex items-center justify-between border-t border-white/10 pt-4">
-          <span className="text-white/40">难度</span>
+          <span className="text-white/40">Difficulty</span>
           <span className="text-white/78">{difficulty}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-white/40">价格</span>
+          <span className="text-white/40">Price</span>
           <span className="text-white/78">{price}</span>
         </div>
       </div>
