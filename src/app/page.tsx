@@ -1,8 +1,16 @@
 export default function Home() {
   return (
-    <main style={{ padding: "40px" }}>
-      <h1>Hello Mingwei 🚀</h1>
-      <p>This is my first deployed Next.js website.</p>
+    <main style={{
+      padding:"40px",
+      textAlign:"center"
+    }}>
+      <h1>Welcome to Mingwei's Website 🚀</h1>
+
+      <p>I built this using Next.js + Vercel.</p>
+
+      <button>
+        Click Me
+      </button>
     </main>
   );
 }
