@@ -1,18 +1,18 @@
-import { ExploreFilter } from "../components/explore-filter";
 import { PageShell } from "../components/page-shell";
+import { QuizForm } from "../components/quiz-form";
 import { SectionHeader } from "../components/section-header";
 
-export default function ExplorePage() {
+export default function QuizPage() {
   return (
     <PageShell>
       <section className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Explore"
-            title="Explore AI tools"
-            description="Search and filter AI tools by workflow so you can find the right option without opening a dozen tabs."
+            eyebrow="Find My Stack"
+            title="Find My AI Stack"
+            description="Answer three quick questions and get a practical starter stack for your goal."
           />
-          <ExploreFilter />
+          <QuizForm />
         </div>
       </section>
     </PageShell>

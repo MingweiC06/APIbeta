@@ -3,6 +3,8 @@ import Link from "next/link";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/explore", label: "Explore" },
+  { href: "/compare", label: "Compare" },
+  { href: "/quiz", label: "Quiz" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -35,7 +37,7 @@ export function SiteHeader() {
           <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-medium text-white/70">
             <span className="text-white">EN</span>
             <span className="mx-2 text-white/25">|</span>
-            <span className="text-white/45">CN</span>
+            <span className="text-white/45">中文</span>
           </div>
         </div>
 

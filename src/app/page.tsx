@@ -7,32 +7,32 @@ import { ToolCard } from "./components/tool-card";
 const whyItems = [
   {
     title: "Fewer tabs, clearer choices",
-    body: "Bring model discovery, comparison, and usage paths into one focused experience instead of scattering work across browser tabs.",
+    body: "Browse AI tools by real use case, compare them side by side, and move toward a practical workflow.",
   },
   {
-    title: "Built for different people",
-    body: "Students, creators, founders, developers, and teams need different AI workflows. AIbeta treats those groups differently from the start.",
+    title: "Workflow-first recommendations",
+    body: "AIbeta is not an API reseller and does not sell tokens. It helps users understand which tool fits the job.",
   },
   {
-    title: "Global first, China ready",
-    body: "This version speaks to global users first, while the companion Chinese version can serve Chinese users with localized context.",
+    title: "Simple enough to start",
+    body: "The quiz turns a messy AI landscape into a small stack you can actually try today.",
   },
 ] as const;
 
-const steps = ["Choose your role", "Find the right model", "Learn the workflow", "Use it in one place"] as const;
+const steps = ["Explore tools", "Compare options", "Find your stack", "Start the workflow"] as const;
 
 const faqs = [
   {
-    q: "Is AIbeta only a tool directory?",
-    a: "No. Discovery is one goal, but the bigger vision is helping people choose and use the AI model they want from one reliable website.",
+    q: "What is AIbeta?",
+    a: "AIbeta is a discovery and recommendation website that helps users find the right AI tools and workflows in one place.",
   },
   {
-    q: "Who is it for?",
-    a: "AIbeta can serve different groups differently: students, creators, developers, founders, small teams, and users who want a simpler AI workspace.",
+    q: "Does AIbeta sell API tokens?",
+    a: "No. AIbeta is not an API reseller, does not sell tokens, and does not process payments. It helps users choose tools.",
   },
   {
-    q: "Will there be a Chinese version?",
-    a: "Yes. This is the global English version. A separate Chinese version can focus on Chinese users, local onboarding, and Chinese-language guidance.",
+    q: "How should I start?",
+    a: "Explore the tool cards, compare the main options, then take the quiz to get a recommended starter stack.",
   },
 ] as const;
 
@@ -44,26 +44,26 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <p className="fade-up mb-5 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/62 backdrop-blur">
-              Global AI workspace for the models you choose
+              Find the right AI in one place
             </p>
             <h1 className="fade-up fade-delay-1 gradient-text text-5xl font-semibold tracking-tight sm:text-7xl lg:text-8xl">
-              Use any AI model from one place
+              Find the right AI workflow
             </h1>
             <p className="fade-up fade-delay-2 mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/64 sm:text-xl">
-              AIbeta helps global users discover, compare, learn, and use the AI tools that fit their real work without juggling endless tabs.
+              AIbeta helps users discover, compare, and choose AI tools for study, coding, video, business, and image workflows.
             </p>
             <div className="fade-up fade-delay-3 mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <Link
                 href="/explore"
                 className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#05060a] transition hover:bg-teal-100"
               >
-                Start exploring
+                Explore AI
               </Link>
               <Link
-                href="/services"
+                href="/quiz"
                 className="rounded-lg border border-white/12 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition hover:border-white/24 hover:bg-white/10"
               >
-                See services
+                Find My Stack
               </Link>
             </div>
           </div>
@@ -83,8 +83,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Featured AI Tools"
-            title="Start with the models people already trust"
-            description="Compare the major AI platforms by what they are good at, how hard they are to learn, and where they fit in a workflow."
+            title="Featured AI cards"
+            description="Start with trusted AI tools and understand where each one fits before choosing your workflow."
           />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {featuredTools.map((tool) => (
@@ -113,8 +113,8 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           <SectionHeader
             eyebrow="How It Works"
-            title="From model choice to real usage"
-            description="The goal is not just to discover AI tools. The goal is to help people actually use them in one calm, organized place."
+            title="A simple workflow for choosing AI"
+            description="User arrives, explores, compares, gets a recommendation, and leaves understanding which AI to use."
           />
           <div className="glass-card rounded-lg p-6 sm:p-8">
             <div className="grid gap-4 md:grid-cols-4">
