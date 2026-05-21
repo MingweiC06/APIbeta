@@ -3,87 +3,101 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(180deg,#0f172a,#020617)",
+        background: "#050816",
         color: "white",
-        padding: "60px",
-        fontFamily: "Arial",
+        overflow: "hidden",
       }}
     >
       <section
         style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
           textAlign: "center",
-          marginTop: "120px",
+          padding: "40px",
         }}
       >
-        <h1
+        <div
           style={{
-            fontSize: "72px",
-            marginBottom: "10px",
+            padding: "12px 20px",
+            border: "1px solid rgba(255,255,255,.15)",
+            borderRadius: "999px",
+            color: "#94a3b8",
+            marginBottom: "24px",
           }}
         >
-          Mingwei 🚀
+          First Website • Next.js • Vercel
+        </div>
+
+        <h1
+          style={{
+            fontSize: "clamp(56px,10vw,120px)",
+            lineHeight: 1,
+            margin: 0,
+            fontWeight: 800,
+          }}
+        >
+          Mingwei
         </h1>
+
+        <div
+          style={{
+            fontSize: "clamp(24px,4vw,42px)",
+            color: "#60a5fa",
+            marginTop: "16px",
+          }}
+        >
+          Building things on the internet 🚀
+        </div>
 
         <p
           style={{
-            fontSize: "24px",
+            marginTop: "30px",
+            maxWidth: "700px",
             color: "#94a3b8",
+            fontSize: "18px",
           }}
         >
-          Welcome to my first deployed website
+          My first deployed website built with Next.js, GitHub and Vercel.
         </p>
 
         <div
           style={{
-            marginTop: "30px",
             display: "flex",
-            justifyContent: "center",
-            gap: "20px",
+            gap: "16px",
+            marginTop: "40px",
+            flexWrap: "wrap",
           }}
         >
           <button
             style={{
-              padding: "14px 24px",
-              borderRadius: "14px",
+              background: "white",
+              color: "black",
               border: "none",
+              padding: "16px 28px",
+              borderRadius: "14px",
+              fontWeight: 700,
               cursor: "pointer",
             }}
           >
-            Projects
+            View Projects
           </button>
 
           <button
             style={{
-              padding: "14px 24px",
-              borderRadius: "14px",
               background: "transparent",
               color: "white",
-              border: "1px solid white",
+              border: "1px solid rgba(255,255,255,.2)",
+              padding: "16px 28px",
+              borderRadius: "14px",
               cursor: "pointer",
             }}
           >
             Contact
           </button>
         </div>
-      </section>
-
-      <section
-        style={{
-          marginTop: "150px",
-          textAlign: "center",
-        }}
-      >
-        <h2>About Me</h2>
-
-        <p
-          style={{
-            maxWidth: "700px",
-            margin: "20px auto",
-            color: "#cbd5e1",
-          }}
-        >
-          I built this website using Next.js, GitHub, and Vercel.
-        </p>
       </section>
     </main>
   );
