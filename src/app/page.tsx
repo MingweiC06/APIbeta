@@ -1,16 +1,23 @@
 export default function Home() {
   return (
-    <main style={{
-      padding:"40px",
-      textAlign:"center"
-    }}>
-      <h1>Welcome to Mingwei's Website 🚀</h1>
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#0f172a",
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <h1 style={{ fontSize: "64px" }}>
+        Mingwei 🚀
+      </h1>
 
-      <p>I built this using Next.js + Vercel.</p>
-
-      <button>
-        Click Me
-      </button>
+      <p style={{ fontSize: "22px" }}>
+        Welcome to my website
+      </p>
     </main>
   );
 }
