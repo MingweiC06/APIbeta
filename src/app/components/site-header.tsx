@@ -1,11 +1,10 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/explore", label: "Explore" },
+  { href: "/apis", label: "Directory" },
+  { href: "/categories", label: "Categories" },
+  { href: "/guides", label: "Guides" },
   { href: "/compare", label: "Compare" },
-  { href: "/quiz", label: "Quiz" },
-  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -16,10 +15,13 @@ export function SiteHeader() {
       <div className="mx-auto max-w-7xl px-5 py-4 sm:px-8">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="group flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-lg border border-white/15 bg-white/10 text-sm font-semibold shadow-[0_0_28px_rgba(45,212,191,0.18)]">
-              AI
+            <span className="grid size-9 place-items-center rounded-lg border border-teal-200/30 bg-teal-300/10 text-xs font-bold tracking-wide text-teal-200 shadow-[0_0_28px_rgba(45,212,191,0.18)]">
+              API
             </span>
-            <span className="text-lg font-semibold tracking-tight">AIbeta</span>
+            <span className="leading-tight">
+              <span className="block text-lg font-semibold tracking-tight">APIbeta</span>
+              <span className="block text-[11px] text-white/45">API Encyclopedia</span>
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 md:flex">
@@ -34,11 +36,12 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-medium text-white/70">
-            <span className="text-white">EN</span>
-            <span className="mx-2 text-white/25">|</span>
-            <span className="text-white/45">中文</span>
-          </div>
+          <Link
+            href="/submit"
+            className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#05060a] transition hover:bg-teal-100 md:block"
+          >
+            Suggest an API
+          </Link>
         </div>
 
         <nav className="mt-4 flex gap-2 overflow-x-auto pb-1 md:hidden">
@@ -51,6 +54,12 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/submit"
+            className="shrink-0 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#05060a]"
+          >
+            Suggest
+          </Link>
         </nav>
       </div>
     </header>

@@ -1,66 +1,67 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { PageShell } from "../components/page-shell";
 import { SectionHeader } from "../components/section-header";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with APIbeta: report an error in an entry, suggest an API, or open an issue on GitHub.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (
     <PageShell>
-      <section className="px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-5xl">
+      <section className="px-5 py-16 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-3xl">
           <SectionHeader
-            eyebrow="Request Access"
-            title="Join the AIbeta waitlist"
-            description="Tell us what you want AIbeta to help you choose. No backend is connected yet, so this is a frontend MVP form."
+            eyebrow="Contact"
+            title="Reach the APIbeta maintainers"
+            description="APIbeta is a small, community-driven project. The fastest way to reach us is public, on GitHub."
           />
-          <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-            <form className="glass-card rounded-lg p-6 sm:p-8">
-              <label className="block text-sm font-medium text-white/72" htmlFor="name">
-                Name
-              </label>
-              <input
-                className="mt-2 w-full rounded-lg border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none transition placeholder:text-white/28 focus:border-teal-200/50"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                type="text"
-              />
-
-              <label className="mt-5 block text-sm font-medium text-white/72" htmlFor="email">
-                Email
-              </label>
-              <input
-                className="mt-2 w-full rounded-lg border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none transition placeholder:text-white/28 focus:border-teal-200/50"
-                id="email"
-                name="email"
-                placeholder="saveazure@gmail.com"
-                type="email"
-              />
-
-              <label className="mt-5 block text-sm font-medium text-white/72" htmlFor="goal">
-                Goal
-              </label>
-              <textarea
-                className="mt-2 min-h-36 w-full resize-none rounded-lg border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none transition placeholder:text-white/28 focus:border-teal-200/50"
-                id="goal"
-                name="goal"
-                placeholder="I want to find the right AI stack for studying, coding, business, images, or video..."
-              />
-
-              <button
-                className="mt-6 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#05060a] transition hover:bg-teal-100"
-                type="submit"
+          <div className="space-y-4">
+            <div className="glass-card rounded-xl p-6 sm:p-8">
+              <h2 className="text-lg font-semibold text-white">Found a wrong fact?</h2>
+              <p className="mt-2 text-sm leading-6 text-white/60">
+                If an entry lists an endpoint, price or auth method that no longer matches
+                the provider&rsquo;s docs, please open an issue and point at the page. We
+                correct entries quickly.
+              </p>
+              <a
+                href="https://github.com/MingweiC06/APIbeta/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#05060a] transition hover:bg-teal-100"
               >
-                Join Waitlist
-              </button>
-            </form>
+                Open a GitHub issue ↗
+              </a>
+            </div>
 
-            <aside className="glass-card rounded-lg p-6 sm:p-8">
-              <h2 className="text-xl font-semibold">Contact</h2>
-              <div className="mt-6 space-y-3 text-sm text-white/60">
-                <p className="rounded-lg border border-white/10 bg-white/[0.04] p-4">WeChat: AzureTrust</p>
-                <p className="rounded-lg border border-white/10 bg-white/[0.04] p-4">Email: saveazure@gmail.com</p>
-                <p className="rounded-lg border border-white/10 bg-white/[0.04] p-4">Social: coming soon</p>
-              </div>
-            </aside>
+            <div className="glass-card rounded-xl p-6 sm:p-8">
+              <h2 className="text-lg font-semibold text-white">Want an API added?</h2>
+              <p className="mt-2 text-sm leading-6 text-white/60">
+                Use the suggestion form — it prepares a pre-filled GitHub issue for you.
+              </p>
+              <Link
+                href="/submit"
+                className="mt-4 inline-block rounded-lg border border-white/12 bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/24 hover:bg-white/10"
+              >
+                Suggest an API
+              </Link>
+            </div>
+
+            <div className="glass-card rounded-xl p-6 sm:p-8">
+              <h2 className="text-lg font-semibold text-white">About this site</h2>
+              <p className="mt-2 text-sm leading-6 text-white/60">
+                APIbeta is free at MVP, has no backend, and stores nothing about you.
+                Read more on the{" "}
+                <Link href="/about" className="text-teal-200 underline underline-offset-2">
+                  about page
+                </Link>
+                .
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -1,48 +1,79 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { PageShell } from "../components/page-shell";
 import { SectionHeader } from "../components/section-header";
+import { allApis } from "@/data/apis";
 
-const timeline = [
-  ["Year 1", "Started using AI tools for school, coding, writing, and learning faster."],
-  ["Year 2", "Noticed that most people were losing time switching tools, comparing models, and reading scattered advice."],
-  ["Year 3", "Began shaping AIbeta as a global platform for choosing and using AI models from one place."],
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "APIbeta is a curated, verified encyclopedia of web APIs — built by developers, for developers, free at MVP.",
+  alternates: { canonical: "/about" },
+};
+
+const principles = [
+  {
+    title: "Verified, not scraped",
+    body: "Every endpoint, pricing tier and auth method on APIbeta is checked against the provider's official documentation. We link to our sources on each entry.",
+  },
+  {
+    title: "Typed and migration-ready",
+    body: "The catalog is plain typed data, one object per API. Pages never hardcode facts — the whole encyclopedia can move to a database later without touching a single layout.",
+  },
+  {
+    title: "Free at MVP",
+    body: "No paywalls, no fake rankings. Later, affiliate links or sponsorships may fund the project, and they will always be clearly labeled.",
+  },
 ] as const;
 
 export default function AboutPage() {
   return (
     <PageShell>
-      <section className="px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-5xl">
-          <SectionHeader eyebrow="About" title="Built by Mingwei." />
-          <div className="glass-card rounded-lg p-7 sm:p-10">
+      <section className="px-5 py-16 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl">
+          <SectionHeader eyebrow="About" title="What is APIbeta?" />
+          <div className="glass-card rounded-xl p-7 sm:p-10">
             <p className="text-xl leading-9 text-white/76">
-              AIbeta is built by Mingwei, a third-year college student who kept seeing the same problem:
-              AI models are powerful, but the experience is scattered. People open too many tabs, compare too
-              many subscriptions, and still do not know which model fits their actual work.
+              APIbeta is an API encyclopedia: a curated, verified catalog of real
+              web APIs — currently {allApis.length} entries and growing — paired
+              with plain-language guides that take you from &ldquo;what is an API&rdquo;
+              to your first successful call.
             </p>
             <p className="mt-6 text-lg leading-8 text-white/62">
-              The idea behind AIbeta is simple: make AI easier to use by organizing models, guidance, and workflows
-              around the user instead of forcing every person to figure out the AI ecosystem alone.
+              The idea is simple. Developers should not have to open a dozen tabs,
+              read scattered pricing pages and reverse-engineer example code just to
+              answer &ldquo;which API should I use&rdquo;. APIbeta does that organizing
+              up front and links out to the official docs for everything that matters.
             </p>
             <div className="mt-10 rounded-lg border border-white/10 bg-white/[0.04] p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-200/80">
                 Mission
               </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight">
-                Help people use the AI model they want, from one focused website.
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+                Make the world of APIs one readable, trustworthy catalog.
               </h2>
             </div>
           </div>
 
-          <section className="mt-20">
-            <SectionHeader eyebrow="Timeline" title="From student problem to product vision" />
-            <div className="space-y-4">
-              {timeline.map(([year, text]) => (
-                <div key={year} className="glass-card grid gap-4 rounded-lg p-6 sm:grid-cols-[120px_1fr]">
-                  <p className="text-2xl font-semibold text-teal-200">{year}</p>
-                  <p className="leading-7 text-white/64">{text}</p>
+          <section className="mt-14">
+            <div className="grid gap-4 md:grid-cols-3">
+              {principles.map((p) => (
+                <div key={p.title} className="glass-card rounded-xl p-6">
+                  <h3 className="font-semibold text-white">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-white/58">{p.body}</p>
                 </div>
               ))}
             </div>
+          </section>
+
+          <section className="mt-14 text-center">
+            <p className="text-white/55">
+              Know an API we are missing?{" "}
+              <Link href="/submit" className="text-teal-200 underline underline-offset-2">
+                Suggest it
+              </Link>{" "}
+              — community submissions are how the catalog gets better.
+            </p>
           </section>
         </div>
       </section>
